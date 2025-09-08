@@ -6,11 +6,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
 import java.time.LocalDate;
 
 @Entity
-public class Produto {
+public class Produto extends PanacheEntityBase{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
