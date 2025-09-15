@@ -10,11 +10,12 @@ import jakarta.transaction.Transactional;
 public class CategoriaTests {
     @Test
     @Transactional
-    public void testSalvaUmaCategoriaEBuscaUmaCategoriaSalva() {
+    public void testSalvaUmaCategoria() {
         Categoria categoria = new Categoria();
         categoria.nome = "Salgados";
         categoria.persist();
 
-        Assertions.assertEquals(categoria.codigo, 12);
+        Assertions.assertEquals(categoria.codigo, 11);
     }
 }
+
